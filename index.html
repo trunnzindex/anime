@@ -3,87 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anime Bookshelf</title>
+<title>Bookshelf</title>
 <style>
     body {
-        background:#111;
-        color:#fff;
+        background:#0f0f0f;
+        color:#e5e5e5;
         font-family:Arial, sans-serif;
         margin:0;
+        padding:0;
+    }
+    .container {
+        max-width:1200px;
+        margin:auto;
         padding:20px;
     }
-    h1 { margin-bottom:20px; }
-
-    .grid {
-        display:grid;
-        grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
-        gap:20px;
-    }
-
-    .card {
-        background:#1a1a1a;
-        border-radius:12px;
-        padding:12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-
-    .card img {
-        width:100%;
-        height:300px;
-        object-fit:cover;
-        border-radius:10px;
-        background:#000;
-    }
-
-    .title {
-        font-size:16px;
-        font-weight:bold;
-        margin:10px 0 5px;
+    h2 {
+        font-size:26px;
+        margin:20px 0;
         display:flex;
         align-items:center;
-        gap:6px;
+        gap:8px;
     }
-
+    .grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+        gap:25px;
+        margin-top:20px;
+    }
+    .card {
+        background:#1a1a1a;
+        border-radius:14px;
+        overflow:hidden;
+        display:flex;
+        flex-direction:column;
+        box-shadow:0 4px 14px rgba(0,0,0,0.45);
+    }
+    .imgbox {
+        width:100%;
+        height:330px;
+        background:#000;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .imgbox img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    .info {
+        padding:15px;
+    }
+    .title {
+        display:flex;
+        align-items:center;
+        gap:8px;
+        font-weight:bold;
+        margin-bottom:8px;
+        font-size:15px;
+    }
     .score {
         display:inline-block;
         padding:3px 8px;
-        background:#8a63d2;
         border-radius:6px;
-        font-size:14px;
-        margin-bottom:6px;
+        font-size:13px;
+        background:#8a63d2;
+        margin-bottom:8px;
     }
-
     .status {
         display:inline-block;
-        background:#2a8f56;
-        padding:4px 10px;
+        background:#1f8f4d;
+        color:white;
+        padding:5px 12px;
         border-radius:20px;
         font-size:13px;
     }
 </style>
 </head>
 <body>
-<h1>Bookshelf</h1>
+<div class="container">
 
-<div class="grid">
+    <h2>📚 Bookshelf</h2>
 
-    <!-- COPY + PASTE CARD MẪU NÀY ĐỂ THÊM ANIME MỚI -->
-    <div class="card">
-        <img src="https://i1.whakoom.com/large/05/2a/6e933b3bb15f44e3a2fc41da6a6f2ab9.jpg?_gl=1*k0s9d5*_ga*MTkxMTU2MDc2OC4xNzYyMzMxMjQ0*_ga_7TE1PVSLNM*czE3NjIzMzEyNDMkbzEkZzAkdDE3NjIzMzEyNDMkajYwJGwwJGgw" alt="cover">
-        <div class="title">001 - Tên Anime</div>
-        <div class="score">8.5</div>
-        <div class="status">Hoàn Thành</div>
+    <div class="grid">
+
+        <!-- COPY + PASTE CARD NÀY ĐỂ THÊM MỚI -->
+        <div class="card">
+            <div class="imgbox">
+                <img src="https://via.placeholder.com/300x450?text=Cover" />
+            </div>
+            <div class="info">
+                <div class="title">001 - Tên Anime</div>
+                <div class="score">8.2</div><br>
+                <div class="status">Hoàn Thành</div>
+            </div>
+        </div>
+
+        <!-- Ví dụ giống giao diện bạn gửi -->
+        <div class="card">
+            <div class="imgbox">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/5a/OnePieceVolume61Cover.png" />
+            </div>
+            <div class="info">
+                <div class="title">002 - One Piece</div>
+                <div class="score" style="background:#d87d28">8.22</div><br>
+                <div class="status">Hoàn Thành</div>
+            </div>
+        </div>
+
     </div>
-
-    <!-- Bạn chỉ cần copy đoạn dưới và thay dữ liệu -->
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/5a/OnePieceVolume61Cover.png">
-        <div class="title">002 - One Piece</div>
-        <div class="score">9.1</div>
-        <div class="status">Đang Ra</div>
-    </div>
-
 </div>
-
 </body>
 </html>
